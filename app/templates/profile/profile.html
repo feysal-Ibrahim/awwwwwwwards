@@ -47,24 +47,28 @@
     <hr>
     <div class="container">
         <div class="row">
-                {% for img in image%}
-            {% if img.user.id == user.id %}
-            <div class="col-md-4 col-lg-4 col-sm-8 col-xs-8">
-                    {% if img.image %}
+            {% for pro in project%}
+            {% if pro.user.id == user.id %}
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    {% if pro.image %}
                     <div class="card">
                         <div class="card-header">
-                                <img src="{{img.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:8%;height:8%">
+                                <img src="{{pro.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:8%;height:8%">
                                 {% if user.id == img.user.id %}
                                 <a href="{% url 'profile' %}">{{img.user.username}}</a>
                                 {% else %}
-                                <a href="#">{{img.user.username}}</a>
+                                <a href="#">{{pro.user.username}}</a>
                                 {% endif %}
                         </div>
                         <div class="card-body">
-                            {% if img.image.url %}
-                                <img src="{{img.image.url}}" alt="img-fluid" style="width:100%; height:100%">
-                                <p>{{img.caption}}</p>
-                                <p>{{img.upload_date | timesince}} ago</p>
+                            {% if pro.image.url %}
+                               <p>{{pro.description}}</p>
+                                <img src="{{pro.image.url}}" alt="img-fluid" style="width:100%; height:100%">
+                                <p>{{pro.description}}</p>
+                               <p>{{pro.profile}}</p>
+                                <p>{{pro.date}}</p>
+
+                                <p>{{request.date | timesince}} ago</p>
                                 {% if img.likes >= 1 %}
                                 <p><i class="fa fa-heart fa-2x ml-4" style="color:red"></i><b>{{img.likes}} likes</b></p>
                                 {% endif %}

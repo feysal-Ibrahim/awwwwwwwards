@@ -4,72 +4,53 @@
 <div class="container mt-5">
         <div class="row mt-3"></div>
         <div class="row mt-5">
-  <div class="col-md-2 col-lg-2 col-xs-1 col-sm-1"></div>
+  <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"></div>
   <div class="col-md-8 col-lg-8 col-xs-9 col-sm-9">
     <div class="pulse-btn">
   <p><b>{{user | title}}</b>, are you new to awaaards?<a href="{% url 'edit' %}" class="btn btn-info ">Create a profile</a>
 </p>
     </div>
-          {% for project in project %}
-          {% if project.project %}
-          <div class="card">
-                  <div class="card-header">
-                          <img src="{{project.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:4%;height:4%">
-                          {% if profile.user.id == img.user.id %}
-                          <a href="{% url 'profile' %}">{{project.user.username}}</a>
-                          {% else %}
-                          <a href="{% url 'profile' pk=img.user.id %}">{{img.user.username}}</a>
-                          {% endif %}
-                  </div>
-
-
-
-                                      <div class="card-body">
-                                              <img src="{{project.image.url}}" alt="" class="img-fluid" style="width:100%; height:100%">
-                                              <hr>
-                                              <div class="icons mt-3">
-                                                              <a id="like" href="{% url 'like' operation='like' pk=project.id%}" style="color:inherit;">
-                                                                      <i class="far fa-heart fa-2x ml-4"></i>
-                                                              </a>
-
-                                                              <a href="{% url 'comment' pk=project.id %}" style="color:inherit;"><i class="far fa-comment fa-2x ml-4"></i></a>
-
-                                                              <a href="#" style="color:inherit;"><i class="far fa-bookmark fa-2x float-right mr-4"></i></a>
-                                                            </div>
-
-
-
-                                              <br>
-                                              {% if project.likes >= 1  %}
-                                              <div class="row">
-                                                      <h5 style="padding:8px; color:red;"><b>{{img.likes}} likes </b></h5>
-
-                                              </div>
-
-
-                                                {% endif %}
-                                                <div class="row">
-                                                        <h5 style="padding: 8px"><a href="{% url 'profile' pk=project.user.id %}"><b>{{project.user.username}}</b></a> {{project.caption}}</h5>
-                                                </div>
-                                                <h6>{{project.date | timesince}} ago</h6>
-                                                <hr>
-
-                                                {% for comment in comments %}
-                                                {% if project.id == comment.project.id %}
-                                                <p><b>{{comment.user}}</b>  {{comment.comments}}</p>
-                                                {% endif %}
-                                                {% endfor %}
-                                        </div>
-                                        <div class="card-footer">
-                                                <p><a href="{% url 'comment' pk=project.id %}">Add comment</a></p>
-                                        </div>
-                                </div>
+           {% for pro in project%}
+            {% if pro.user.id == user.id %}
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    {% if pro.image %}
+                    <div class="card">
+                        <div class="card-header">
+                                <img src="{{pro.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:8%;height:8%">
+                                {% if user.id == img.user.id %}
+                                <a href="{% url 'profile' %}">{{img.user.username}}</a>
+                                {% else %}
+                                <a href="{% url 'profile' pk=pro.user.id %}">{{pro.user.username}}</a>
                                 {% endif %}
-                                <br><br>
-                                {% endfor %}
                         </div>
-                        <div class="col-md-2 col-lg-2 col-xs-1 col-sm-1"></div>
-        </div>
+                        <div class="card-body">
+                            {% if pro.image.url %}
+                               <p>{{pro.description}}</p>
+                                <img src="{{pro.image.url}}" alt="img-fluid" style="width:100%; height:100%">
+                                <p>{{pro.description}}</p>
+                               <p>{{pro.profile}}</p>
+                                <p>{{pro.date}}</p>
 
+                                <p>{{request.date | timesince}} ago</p>
+                                {% if img.likes >= 1 %}
+                                <p><i class="fa fa-heart fa-2x ml-4" style="color:red"></i><b>{{img.likes}} likes</b></p>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        <div class="card-footer">
+                                {% for comment in comments %}
+                                {% if img.id == comment.image.id %}
+                                <p><b>{{comment.user}}</b>  {{comment.comments}}</p>
+                                <h6  style="font-size:12px"><i>{{comment.comment_date | timesince}} ago</i></h6>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}

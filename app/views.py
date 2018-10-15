@@ -26,8 +26,8 @@ def profile(request):
     	Method that fetches a users profile page
     	'''
     current_user=request.user
-    profile=Profile.get_profile( )
-    project=Project.get_project()
+    profile=Profile.objects.all( )
+    project=Project.objects.all()
     return render( request , 'profile/profile.html' , {
         "project": project ,
         "user": current_user ,
@@ -122,7 +122,7 @@ def like(request , operation , pk):
     '''
     Method function that likes a post.
     '''
-    project=get_object_or_404( Project , pk=pk )
+    project=get_object_or_404( request,Project , pk=pk )
     if operation == 'like':
         project.likes+=1
         project.save( )
