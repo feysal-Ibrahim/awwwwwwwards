@@ -61,9 +61,9 @@ def edit(request):
 
 
 @login_required( login_url="/accounts/login/" )
-def upload(request):
+def create(request):
     '''
-    	Method that return a form for uploading images
+    	Method that return a form for uploading project
     	'''
     current_user=request.user
     profiles=Profile.get_profile( )

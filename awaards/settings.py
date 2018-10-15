@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'app.apps.AppConfig',
     'tinymce' ,
+     'bootstrap3' ,
+    'bootstrap4' ,
+    'pyuploadcare' ,
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
