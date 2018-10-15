@@ -1,33 +1,37 @@
 {% extends 'award/base.html' %}
 {% block body %}
-<div class="albums-container container-fluid">
+<div class="project-container container-fluid">
 
     <!-- Albums -->
     <div class="row">
         <div class="col-sm-12">
              </div>
-    {% for project in project %}
-    <div class="col-sm-6 col-lg-4">
+    {% for project in all_project %}
+    <div class="col-sm-5 col-lg-5">
                     <div class="thumbnail">
                         <a href="">
-                            <h2>{{ project.name }}</h2>
                              <img src="{{project.image.url}}" class="img-responsive">
                         </a>
                         <div class="caption">
-                            <h4>{{ project.description }}</h4>
-                            <a href="">
-                            <h4>{{ project.link }}</h4>
-                            </a>
-                            <h4>{{ project.profile }}</h4>
-                            <h4>{{ project.user }}</h4>
-                            <h4>{{ project.date }}</h4>
+                            <h4>{{ project.name }}</h4>
 
+                             <!-- View Details -->
+                            <a href="{% url 'detail' project.id %}" class="btn btn-primary btn-sm" role="button">View Details</a>
 
-
+                            <!-- Delete project -->
+                            <form action="{% url 'project-delete' project.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="project_id" value="{{project_id}}" />
+                                <button type="submit" class="btn btn-default btn-lg">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </form>
+                </div>
                         </div>
                     </div>
     </div>
     </div>
+</div>
 </div>
 {% endfor %}
 {% endblock %}

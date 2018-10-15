@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
+from django.core.urlresolvers import reverse
 import datetime as dt
 
 
@@ -42,6 +43,10 @@ class Project( models.Model ):
     user=models.ForeignKey( User , on_delete=models.CASCADE )
     date=models.DateTimeField( auto_now_add=True )
 
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'pk': self.pk})
+
     @classmethod
     def search_by_name(cls , search_term):
         projects=cls.objects.filter( name__icontains=search_term )
@@ -68,17 +73,18 @@ class Project( models.Model ):
         return posts
 
     @classmethod
-    def get_post_by_id(cls , id):
+    def get_project_by_id(cls , id):
         projects=Project.objects.filter( id=Project.id )
         return projects
 
     @classmethod
-    def get_all_profiles(cls):
+    def get_profile(cls):
         profile=Profile.objects.all( )
         return profile
 
     @classmethod
-    def get_project(cls):
-        pass
+    def get_peoject(cls):
+        project=Project.objects.all()
+        return project
 
 
