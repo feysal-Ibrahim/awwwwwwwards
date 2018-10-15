@@ -14,7 +14,7 @@
             <h2>Upload Image</h2>
         </div>
         <div class="card-body">
-                <form action="{%url 'upload' %}" method="post" enctype="multipart/form-data">
+                <form action="{%url 'create' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% bootstrap_form form %}
                     <div class="form-group">
