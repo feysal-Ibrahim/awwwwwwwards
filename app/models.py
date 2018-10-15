@@ -77,4 +77,8 @@ class Project( models.Model ):
         profile=Profile.objects.all( )
         return profile
 
+    @classmethod
+    def get_project(cls):
+        pass
+
 

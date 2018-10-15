@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     # /app/
-    url( r'^$' , views.IndexView.as_view( ) , name='index' ) ,
+    url( r'^$' , views.index, name='index' ) ,
 ]
 
 if settings.DEBUG:
