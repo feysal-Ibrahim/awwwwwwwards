@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render,redirect
 from django.contrib.auth import  authenticate,login
 from django.views.generic import View
-from .models import Post
+from .models import Project
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -12,4 +12,4 @@ class IndexView(generic.ListView):
     context_object_name = 'all_post'
 
     def get_queryset(self):
-        return Post.objects.all()
+        return Project.objects.all()

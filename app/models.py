@@ -33,7 +33,7 @@ class Profile( models.Model ):
         return profile
 
 # user post model
-class Post( models.Model ):
+class Project( models.Model ):
     name=models.CharField( max_length=30 )
     image=models.ImageField( upload_to='images/' , blank=True )
     description=HTMLField( blank=True )
