@@ -16,8 +16,10 @@
                     {% if pro.image %}
                     <div class="card">
                         <div class="card-header">
+                            <a href="{% url 'profile' pk=pro.user.id %}">
                                 <img src="{{pro.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:8%;height:8%">
                                 {% if user.id == img.user.id %}
+                        </a>
                                 <a href="{% url 'profile' %}">{{img.user.username}}</a>
                                 {% else %}
                                 <a href="{% url 'profile' pk=pro.user.id %}">{{pro.user.username}}</a>
@@ -25,14 +27,13 @@
                         </div>
                         <div class="card-body">
                             {% if pro.image.url %}
-                               <p>{{pro.description}}</p>
+                            <a href="{% url 'profile' pk=pro.user.id %}" >
                                 <img src="{{pro.image.url}}" alt="img-fluid" style="width:100%; height:100%">
-                                <p>{{pro.description}}</p>
-                               <p>{{pro.profile}}</p>
+                            </a>
+                                <h3>{{pro.description}}</h3>
+                            <br>
                                 <p>{{pro.date}}</p>
-
-                                <p>{{request.date | timesince}} ago</p>
-                                {% if img.likes >= 1 %}
+                             {% if img.likes >= 1 %}
                                 <p><i class="fa fa-heart fa-2x ml-4" style="color:red"></i><b>{{img.likes}} likes</b></p>
                                 {% endif %}
                             {% endif %}
