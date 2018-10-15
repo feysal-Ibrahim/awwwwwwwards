@@ -9,7 +9,7 @@ from .models import Project
 # Create your views here.
 class IndexView(generic.ListView):
     template_name = 'award/index.html'
-    context_object_name = 'all_post'
+    context_object_name = 'all_project'
 
     def get_queryset(self):
         return Project.objects.all()
