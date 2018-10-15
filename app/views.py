@@ -1,6 +1,5 @@
 from django.shortcuts import render , redirect , get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse , Http404
 from .models import Project , Profile
 from .forms import EditProfileForm , UploadForm
 from django.contrib.auth.models import User
