@@ -7,7 +7,7 @@
         <div class="col-sm-12">
              </div>
     {% for project in all_project %}
-    <div class="col-sm-4 col-lg-2">
+    <div class="col-sm-6 col-lg-4">
                     <div class="thumbnail">
                         <a href="">
                             <h2>{{ project.name }}</h2>
@@ -15,7 +15,9 @@
                         </a>
                         <div class="caption">
                             <h4>{{ project.description }}</h4>
+                            <a href="">
                             <h4>{{ project.link }}</h4>
+                            </a>
                             <h4>{{ project.profile }}</h4>
                             <h4>{{ project.user }}</h4>
                             <h4>{{ project.date }}</h4>
@@ -27,4 +29,5 @@
     </div>
     </div>
 </div>
+{% endfor %}
 {% endblock %}

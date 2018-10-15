@@ -44,32 +44,33 @@ class Project( models.Model ):
 
     @classmethod
     def search_by_name(cls , search_term):
-        posts=cls.objects.filter( name__icontains=search_term )
-        return posts
+        projects=cls.objects.filter( name__icontains=search_term )
+        return projects
 
     @classmethod
     def one_post(cls , id):
-        post=Post.objects.filter( id=id )
-        return post
+        projects=Project.objects.filter( id=id )
+        return projects
 
     @classmethod
     def all_posts(cls):
-        posts=cls.objects.all( )
-        return posts
+        projects=cls.objects.all( )
+        return projects
 
     @classmethod
     def get_user_posts(cls , profile_id):
-        images=Post.objects.filter( profile_id=id )
+        images=Project.objects.filter( profile_id=id )
+        return images
 
     @classmethod
     def get_profile_image(cls , profile):
-        posts=Post.objects.filter( user__pk=profile )
+        posts=Project.objects.filter( user__pk=profile )
         return posts
 
     @classmethod
     def get_post_by_id(cls , id):
-        post=Post.objects.filter( id=Post.id )
-        return post
+        projects=Project.objects.filter( id=Project.id )
+        return projects
 
     @classmethod
     def get_all_profiles(cls):
