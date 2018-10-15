@@ -30,8 +30,3 @@ class Profile( models.Model ):
     def find_profile(cls , search_term):
         profile=cls.objects.filter( user__username__icontains=search_term )
         return profile
-
-    @classmethod
-    def update_profile(cls , id , bio):
-        updated=Image.objects.filter( id=id ).update( bio=bio )
-        return updated
