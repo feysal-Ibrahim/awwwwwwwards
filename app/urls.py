@@ -3,19 +3,16 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-
 urlpatterns=[
-    # /app/
-    url( r'^$' , views.IndexView.as_view( ) , name='index' ) ,
-    # /app/<project>/
-    url( r'^(?P<pk>[0-9]+)/$' , views.DetailView.as_view( ) , name='detail' ) ,
-    # /app/project/1/delete
-    url( r'project/(?P<pk>[0-9]+)/delete/$' , views.ProjectDelete.as_view( ) , name='project-delete' ) ,
-    # /app/project/2/
-    # url( r'project/(?P<pk>[0-9]+)/$' , views.Project.as_view( ) , name='project-update' ) ,
-    url( r'^profile/' , views.profile , name='profile' ) ,
+    url( '^$' , views.home , name='home' ) ,
+    url( r'^profile/' , views.profile , name='profile' ),
+    url( r'^search/' , views.search , name='search' ) ,
+    url( r'^upload_image/' , views.upload , name='upload' ) ,
+    url( r'^edit/' , views.edit , name='edit' ),
+    url( r'^settings/' , views.settings , name='settings' ) ,
+    url( r'^view_profile/(?P<pk>\d+)' , views.view_profile , name='profile' ) ,
+    url( r'^like/(?P<operation>.+)/(?P<pk>\d+)' , views.like , name='like' ),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static( settings.MEDIA_URL , document_root=settings.MEDIA_ROOT )
+    urlpatterns+=static( settings.MEDIA_URL , document_root=settings.MEDIA_ROOT )

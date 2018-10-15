@@ -83,7 +83,7 @@ class Project( models.Model ):
         return profile
 
     @classmethod
-    def get_peoject(cls):
+    def get_project(cls):
         project=Project.objects.all()
         return project
 
