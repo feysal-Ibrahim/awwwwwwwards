@@ -9,6 +9,7 @@ import datetime as dt
 
 # user profile model
 class Profile( models.Model ):
+    objects=None
     profilePic=models.ImageField( upload_to='profile/' , null=True , blank=True )
     contact=HTMLField( )
     bio=models.CharField( max_length=60 , blank=True )
@@ -35,6 +36,7 @@ class Profile( models.Model ):
 
 # user post model
 class Project( models.Model ):
+    objects=None
     name=models.CharField( max_length=30 )
     image=models.ImageField( upload_to='images/' , blank=True )
     description=HTMLField( blank=True )

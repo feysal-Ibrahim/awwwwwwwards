@@ -12,8 +12,8 @@ def home(request):
     Method that fetches all images from all users.
     '''
     current_user=request.user
-    profile=Profile.get_profile( )
-    project=Project.get_project()
+    profile=Profile.objects.all
+    project=Project.objects.all()
     return render( request , 'index.html' , {
         "profile": profile ,
         "current_user": current_user ,
@@ -57,6 +57,7 @@ def edit(request):
         form=EditProfileForm( )
     return render( request , 'profile/edit.html' , {
         "form": form} )
+
 
 
 @login_required( login_url="/accounts/login/" )
