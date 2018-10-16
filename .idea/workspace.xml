@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6228eec-6342-4c7e-bac4-a84b76f7237c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../awaards/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../awaards/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +62,7 @@
           <entry key="Procfile" value="12" />
           <entry key="env" value="19" />
           <entry key="html" value="134" />
+          <entry key="md" value="75" />
           <entry key="py" value="2" />
         </counts>
       </usages-collector>
@@ -69,6 +70,7 @@
         <counts>
           <entry key=".env file" value="19" />
           <entry key="HTML" value="134" />
+          <entry key="Markdown" value="75" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="Python" value="2" />
         </counts>
@@ -79,6 +81,7 @@
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
+          <entry key="md" value="1" />
           <entry key="py" value="1" />
           <entry key="txt" value="2" />
         </counts>
@@ -87,6 +90,7 @@
         <counts>
           <entry key=".env file" value="1" />
           <entry key="HTML" value="1" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1" />
         </counts>
@@ -104,11 +108,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="10" selection-start-line="3" selection-end-line="3" selection-end-column="10" />
+              <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -177,18 +193,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../app/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -235,6 +239,7 @@
         <option value="$PROJECT_DIR$/../Procfile" />
         <option value="$PROJECT_DIR$/../runtime.txt" />
         <option value="$PROJECT_DIR$/../awaards/settings.py" />
+        <option value="$PROJECT_DIR$/../README.md" />
       </list>
     </option>
   </component>
@@ -258,11 +263,6 @@
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="Award" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="." type="b2602c69:ProjectViewProjectNode" />
-              <item name="Award" type="462c0819:PsiDirectoryNode" />
-              <item name="awaards" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -531,7 +531,17 @@
     <entry file="file://$PROJECT_DIR$/../.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-end-line="3" selection-end-column="10" />
+          <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
