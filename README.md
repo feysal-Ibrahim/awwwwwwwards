@@ -6,7 +6,7 @@
 https://feysal-award.herokuapp.com/
 
 ## Description
-his a Django application that functions in a similar way as the rising awarrd  website https://www.awwwards.com/ . The app displays peoject and their details for users to rate and vote the best amongs the project dispalyed by various users.
+This a Django application that functions in a similar way as the rising awarrd  website https://www.awwwards.com/ . The app displays peoject and their details for users to rate and vote the best amongs the project dispalyed by various users.
 
 ##  User Story/How it works
 1. Sign in to the application.
