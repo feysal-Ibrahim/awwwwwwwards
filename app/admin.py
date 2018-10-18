@@ -1,8 +1,15 @@
 from django.contrib import admin
-from .models import Project,Profile
+from .models import Project,Profile,Review,Comment
 
 # Register your models here.
-
+class ReviewAdmin(admin.ModelAdmin):
+    model = Review
+    list_display = ('wine', 'rating', 'user_name', 'comment', 'pub_date')
+    list_filter = ['pub_date', 'user_name']
+    search_fields = ['comment']
 
 admin.site.register(Project)
 admin.site.register(Profile)
+admin.site.register(Review)
+admin.site.register(Comment)
+

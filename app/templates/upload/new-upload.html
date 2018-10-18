@@ -11,10 +11,10 @@
     <div class="col-md-4">
     <div class="card card-info mt-5">
         <div class="card-header">
-            <h2>Upload Image</h2>
+            <h2>Upload Project</h2>
         </div>
         <div class="card-body">
-                <form action="{%url 'create' %}" method="post" enctype="multipart/form-data">
+                <form action="{%url 'upload' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% bootstrap_form form %}
                     <div class="form-group">

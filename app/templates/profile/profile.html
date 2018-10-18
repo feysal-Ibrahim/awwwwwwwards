@@ -1,93 +1,119 @@
-{% extends 'base.html' %}
+{%extends 'base.html'%}
 {% load bootstrap4 %}
-{% block content %}
 {{block.super}}
-<div class="container mt-5">
-    <div class="row mt-1"></div>
-    <p><a href="{% url 'home' %}" class="btn btn-default" >Back to Home</a></p>
-    <div class="row mt-5">
-    </div>
-    <div class="row mt-5">
+{% load static %}
+{% block content %}
 
-        {% for prof in profile %}
-        {% if user.id == prof.user.id %}
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                {% if prof.profilePic %}
-                    <img src="{{prof.profilePic.url}}" alt="" class="img-fluid" style="border-radius:50%">
-                {% else %}
-                    <img src="/static/img/avatar.png" alt="" class="img-fluid rounded-circle">
-                {% endif %}
-            </div>
-            <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1"></div>
-            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
-                {% if prof.bio %}
-                    <h5>{{prof.user.username}}</h5>
-                    <p>{{prof.bio}}</p>
-                {% else %}
-                    <h5>{{prof.user.username}}</h5>
-                {% endif %}
-            </div>
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-        {% endif %}
-        {% empty %}
-        <div class="row">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <img src="/static/img/avatar.png" alt="" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1"></div>
-            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
-                <p>{{user.username}}</p>
-            </div>
-        </div>
-        {% endfor %}
-        <hr>
-    </div>
-    <hr>
-    <div class="container">
-        <div class="row">
-            {% for pro in project%}
-            {% if pro.user.id == user.id %}
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    {% if pro.image %}
-                    <div class="card">
-                        <div class="card-header">
-                                <img src="{{pro.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:8%;height:8%">
-                                {% if user.id == img.user.id %}
-                                <a href="{% url 'profile' %}">{{img.user.username}}</a>
-                                {% else %}
-                                <a href="#">{{pro.user.username}}</a>
-                                {% endif %}
-                        </div>
-                        <div class="card-body">
-                            {% if pro.image.url %}
-                               <p>{{pro.description}}</p>
-                                <img src="{{pro.image.url}}" alt="img-fluid" style="width:100%; height:100%">
-                                <p>{{pro.description}}</p>
-                               <p>{{pro.profile}}</p>
-                                <p>{{pro.date}}</p>
+<div class="text-right">
+        <a href="{%url 'edit' %}" class="btn btn-secondary btn-rounded">Edit profile</a>
+</div>
+<div class="text-left">
 
-                                <p>{{request.date | timesince}} ago</p>
-                                {% if img.likes >= 1 %}
-                                <p><i class="fa fa-heart fa-2x ml-4" style="color:red"></i><b>{{img.likes}} likes</b></p>
-                                {% endif %}
-                            {% endif %}
-                        </div>
-                        <div class="card-footer">
-                                {% for comment in comments %}
-                                {% if img.id == comment.image.id %}
-                                <p><b>{{comment.user}}</b>  {{comment.comments}}</p>
-                                <h6  style="font-size:12px"><i>{{comment.comment_date | timesince}} ago</i></h6>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endif %}
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+    <a href="{%url 'home' %}" class="btn btn-danger" style="text-decoration:none;">Back Home</a>
+</div>
+
+<div class="container">
+{% if pro.user.profile%}
+    <div class="card">
+        <div class="card-header">
+                {% if user.is_authenticated %}
+
+                    {{user.username}}
+
+                <div class="text-right">
+                    {{user.profile.email}}
+                </div>
+    </div>
+    <div class="text-center">
+
+        <img src="{{user.profile.profilePic.url}}" alt="Avatar" class="img-responsive" style="border-radius:100%; height:150px; width: 150px;">
+    </div>
+    {% else %}
+    <div class="text-center">
+
+        <img src="https://mbtskoudsalg.com/images/user-avatar-png-1.png" alt="Avatar" class="img-responsive" style="border-radius:70%; height:170px;">
     </div>
 </div>
+    {% endif %}
+
+    <!--Modal: Login with Avatar Form-->
+<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-md" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="text-center">
+                        {% if profile.profilePic %}
+                        <img src="{{profile.profilePic.url}}" alt="Avatar" id="img" class="img-responsive" style="border-radius:100%; height:150px; width: 150px;">
+                        {% else %}
+                    <img src="https://mbtskoudsalg.com/images/user-avatar-png-1.png" height="100" width="100" alt="avatar" class="rounded-circle img-responsive" style="margin-left:10px;">
+                    {% endif %}
+                </div>
+                <hr>
+                <!--Body-->
+
+                </div>
+
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: Login with Avatar Form-->
+
+
+<div class="text-right">
+
+    <h3><em>{{profile.bio}}</em></h3>
+</div>
+</div>
+
+<hr> {% else %}
+
+<a class='btn btn-default' href="/accounts/login">.</a>
+
+
+{% endif %}
+
+{% if posts %}
+<h1 class="text-center">My Projects</h1>
+<div class="row">
+
+    {% for projects in project %}
+    <div class="col-md-4">
+            <div class="card" style="margin-bottom:10px;">
+<div class="card-header">
+    <div class="text-center">
+
+        {{projects.name}}
+    </div>
+    <div class="text-right">
+            <a class="info" href="">Reviews</a>
+        </div>
+</div>
+            <img src="{{projects.image.url}}" id="img" width="349" height="200" class="text-center"  alt="" style="margin-bottom:20px;">
+        </div>
+
+    </div>
+
+
+    {% endfor %}
+</div>
+
+
+       {% else %}
+       <h1 class="text-center">My Projects</h1>
+       <h1>No projects</h1>
+       {% endif %}
+
+<style>
+@media screen and (max-width: 1280px) {
+  #img {
+    height:  200px;
+    width: 310px;
+
+  }
+}
+</style>
+
 {% endblock %}

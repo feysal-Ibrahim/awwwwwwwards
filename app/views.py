@@ -1,7 +1,14 @@
 from django.shortcuts import render , redirect , get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Project , Profile
-from .forms import EditProfileForm , UploadForm
+from django.views import generic
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.core.urlresolvers import reverse_lazy
+from django.http import HttpResponse , Http404
+import datetime
+import datetime as dt
+from django.core.urlresolvers import reverse
+from .models import Project , Profile,Review,Comment
+from .forms import EditProfileForm , UploadForm,ReviewForm,CommentForm,UserForm
 from django.contrib.auth.models import User
 
 
@@ -11,14 +18,17 @@ def home(request):
     '''
     Method that fetches all images from all users.
     '''
-    current_user=request.user
+    date=dt.date.today( )
     profile=Profile.objects.all
     project=Project.objects.all()
+    comments=Comment.objects.all()
+    form=CommentForm( )
     return render( request , 'index.html' , {
         "profile": profile ,
-        "current_user": current_user ,
-        "project": project , } )
-
+        "project": project ,
+        "date":date,
+        "comment":form,
+        "comments":comments} )
 
 @login_required( login_url='/accounts/login/' )
 def profile(request):
@@ -26,9 +36,11 @@ def profile(request):
     	Method that fetches a users profile page
     	'''
     current_user=request.user
-    profile=Profile.objects.all( )
+    profile=Profile.get_profile( )
     project=Project.objects.all()
+    comments=Comment.objects.all()
     return render( request , 'profile/profile.html' , {
+        "comments": comments ,
         "project": project ,
         "user": current_user ,
         "profile": profile , } )
@@ -52,18 +64,17 @@ def edit(request):
             update=form.save( commit=False )
             update.user=current_user
             update.save( )
-            return redirect( 'profile' )
+            return redirect( 'home' )
     else:
-        form=EditProfileForm( )
+        form=EditProfileForm()
     return render( request , 'profile/edit.html' , {
         "form": form} )
 
 
-
 @login_required( login_url="/accounts/login/" )
-def create(request):
+def upload(request):
     '''
-    	Method that return a form for uploading project
+    	Method that return a form for uploading profile
     	'''
     current_user=request.user
     profiles=Profile.get_profile( )
@@ -101,6 +112,26 @@ def search(request):
         return render( request ,'search.html' , {"message": message} )
 
 
+@login_required( login_url='/accounts/login/' )
+def new_comment(request , pk):
+    '''
+    	Method that fetches a users new comment from the comment form
+    	'''
+    project=get_object_or_404( Project , pk=pk )
+    current_user=request.user
+    if request.method == 'POST':
+        form=CommentForm( request.POST )
+        if form.is_valid( ):
+            comment=form.save( commit=False )
+            comment.project=project
+            comment.user=current_user
+            comment.save( )
+            return redirect( 'home' )
+    else:
+        form=CommentForm( )
+    return render( request , 'comment.html' , {"user": current_user ,
+                                               "comment_form": form} )
+
 
 @login_required( login_url="/accounts/login/" )
 def view_profile(request , pk):
@@ -108,25 +139,22 @@ def view_profile(request , pk):
     	Method that dispalys users profile only after creating profile
     	'''
     current_user=request.user
-    project=Project.get_project()
-    profile=Profile.get_profile( )
+    project=Project.objects.all()
+    profile=Profile.objects.all( )
+    comment=Comment.objects.all( )
     user=get_object_or_404( User , pk=pk )
     return render( request , 'profile/view-profile.html' , {"user": current_user ,
                                             "project": project ,
                                             "my_user": user ,
+                                            "comments": comment ,
                                             "profile": profile} )
 
+class ProjectUpdate(UpdateView):
+    model=Project
 
-@login_required( login_url="/accounts/login/" )
-def like(request , operation , pk):
-    '''
-    Method function that likes a post.
-    '''
-    project=get_object_or_404( request,Project , pk=pk )
-    if operation == 'like':
-        project.likes+=1
-        project.save( )
-    elif operation == 'unlike':
-        project.likes-=1
-        project.save( )
-    return redirect( 'home' )
+    template_name = 'album_form.html'
+    fields = ['name', 'image','description','link']
+
+class ProjectDelete(DeleteView):
+    model=Project
+    success_url = reverse_lazy('home')

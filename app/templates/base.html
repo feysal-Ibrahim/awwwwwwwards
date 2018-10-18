@@ -1,62 +1,32 @@
-<!DOTYPE html>
-<html lang="en">
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8" >
-    <title>{% block title %}Awarrds{% endblock %}</title>
-    {% load bootstrap4 %}
-    {% load static %}
-    <link rel="shortcut icon" type="image/png" href=""/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://scontent.fnbo1-1.fna.fbcdn.net/v/t1.0-9/44131166_2087177611596184_7420327062138781696_n.jpg?_nc_cat=101&_nc_ht=scontent.fnbo1-1.fna&oh=92dc67bfb8e9f6ff27df2317df628575&oe=5C401090">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       {% block styles %}
+        {% bootstrap_css %}
+    {% endblock %}
 </head>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<body >
+    {% include "navbar.html" %}
+    {% block content %}
+    {% endblock %}
 
-        <!-- Header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{% url 'home' %}">Awaarrds</a>
-        </div>
 
-        <!-- Items -->
-        <div class="collapse navbar-collapse" id="topNavBar">
-            <ul class="nav navbar-nav">
-                <li class="{% url 'home'%}"><a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;profile</a></li>
-                <li class="#"><a href="#"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span>&nbsp;create profile</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="q" value="">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="{% url 'home'%}">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp; Settings
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
-                    </a>
-                </li>
-            </ul>
-        </div>
 
-    </div>
-</nav>
-{% block content %}
-{% endblock %}
 
-<body>
 
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {% bootstrap_javascript %}
+    {% endblock %}
 </body>
 </html>
+<style>
+ background-color:green;
+</style>
