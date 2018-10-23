@@ -13,6 +13,8 @@ from django.contrib.auth.models import User
 
 
 # Create your views here.
+
+@login_required( login_url='/accounts/login/' )
 def home(request):
     '''
     Method that fetches all images from all users.
@@ -93,6 +95,23 @@ def upload(request):
                 "user": current_user ,
                 "form": form} )
 
+
+
+@login_required( login_url="/accounts/login/" )
+@login_required( login_url='/accounts/login/' )
+def search(request):
+    '''
+	Method that searches for users based on their profiles
+	'''
+    if request.GET['search']:
+        search_term=request.GET.get( "search" )
+        profiles=Profile.objects.filter( user__username__icontains=search_term )
+        message=f"{search_term}"
+
+        return render( request , 'search.html' , {"message": message , "profiles": profiles} )
+    else:
+        message="You haven't searched for any item"
+        return render( request ,'search.html' , {"message": message} )
 
 
 @login_required( login_url='/accounts/login/' )

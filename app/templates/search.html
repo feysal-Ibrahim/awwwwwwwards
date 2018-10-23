@@ -9,6 +9,8 @@
 		  <div class="panel-heading"><h3>Search results for the search term: <strong>{{message}}</strong></h3></div>
 		  {%if projects%}
 		  	{% for project in projects %}
+		  {%if profiles%}
+		  	{% for profile in profiles %}
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-2">
@@ -16,6 +18,7 @@
 					</div>
 					<div class="col-md-10" style="padding-top:11px">
 						<a href="{% url 'profile'%}">{{project.name}}</a>
+						<a href="{% url 'profile'%}">{{profile.user.username}}</a>
 					</div>
 				</div>
 			</div>
