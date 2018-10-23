@@ -1,0 +1,32 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://scontent.fnbo1-1.fna.fbcdn.net/v/t1.0-9/44131166_2087177611596184_7420327062138781696_n.jpg?_nc_cat=101&_nc_ht=scontent.fnbo1-1.fna&oh=92dc67bfb8e9f6ff27df2317df628575&oe=5C401090">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       {% block styles %}
+        {% bootstrap_css %}
+    {% endblock %}
+</head>
+<body >
+    {% include "navbar.html" %}
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>
+<style>
+ background-color:green;
+</style>

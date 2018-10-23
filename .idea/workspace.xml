@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6228eec-6342-4c7e-bac4-a84b76f7237c" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1463376234">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.96" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="25" />
+          <entry key="py" value="19" />
+          <entry key="sqlite3" value="1" />
+          <entry key="templates" value="1" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="25" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="546" />
+          <entry key="py" value="569" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="546" />
+          <entry key="Python" value="569" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-814923137">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.105" value="3" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Bash" value="6" />
+          <entry key="Procfile" value="12" />
+          <entry key="env" value="19" />
+          <entry key="html" value="1561" />
+          <entry key="md" value="372" />
+          <entry key="py" value="775" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key=".env file" value="19" />
+          <entry key="Bash" value="6" />
+          <entry key="HTML" value="1561" />
+          <entry key="Markdown" value="372" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="775" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Procfile" value="1" />
+          <entry key="css" value="2" />
+          <entry key="env" value="3" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="24" />
+          <entry key="md" value="1" />
+          <entry key="png" value="1" />
+          <entry key="py" value="22" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key=".env file" value="3" />
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="24" />
+          <entry key="Image" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="22" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="." />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/award/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/award/detail.html" />
+        <option value="$PROJECT_DIR$/app/templates/award/profile.html" />
+        <option value="$PROJECT_DIR$/app/templates/award/base.html" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/awaards/settings.py" />
+        <option value="$PROJECT_DIR$/app/urls.py" />
+        <option value="$PROJECT_DIR$/awaards/urls.py" />
+        <option value="$PROJECT_DIR$/app/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/app/templates/registration/registration_form.html" />
+        <option value="$PROJECT_DIR$/app/forms.py" />
+        <option value="$PROJECT_DIR$/app/templates/upload/new-upload.html" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/profile/profile.html" />
+        <option value="$PROJECT_DIR$/app/templates/profile/view-profile.html" />
+        <option value="$PROJECT_DIR$/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/profile/setting.html" />
+        <option value="$PROJECT_DIR$/app/templates/navbar.html" />
+        <option value="$USER_HOME$/.env" />
+        <option value="$USER_HOME$/Procfile" />
+        <option value="$USER_HOME$/runtime.txt" />
+        <option value="$USER_HOME$/README.md" />
+        <option value="$USER_HOME$/app/static/css/navbar.css" />
+        <option value="$USER_HOME$/app/templates/reviews/base.html" />
+        <option value="$USER_HOME$/app/templates/reviews/review_list.html" />
+        <option value="$USER_HOME$/awaards/settings.py" />
+        <option value="$USER_HOME$/app/admin.py" />
+        <option value="$USER_HOME$/app/models.py" />
+        <option value="$USER_HOME$/app/templates/base.html" />
+        <option value="$USER_HOME$/app/templates/upload/new-upload.html" />
+        <option value="$USER_HOME$/app/templates/profile/profile.html" />
+        <option value="$USER_HOME$/app/templates/profile/view-profile.html" />
+        <option value="$USER_HOME$/app/forms.py" />
+        <option value="$USER_HOME$/app/templates/index.html" />
+        <option value="$USER_HOME$/app/urls.py" />
+        <option value="$USER_HOME$/app/templates/search.html" />
+        <option value="$USER_HOME$/app/templates/navbar.html" />
+        <option value="$USER_HOME$/app/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="984" />
+    <option name="y" value="82" />
+    <option name="width" value="911" />
+    <option name="height" value="751" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Award" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Award" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Award" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Award" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="setting&#9;ACTION&#9;WelcomeScreen.Settings&#10;terminal  setting&#9;null&#9;null&#10;terminal co&#9;null&#9;null&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;settings&#9;ACTION&#9;WelcomeScreen.Settings&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6228eec-6342-4c7e-bac4-a84b76f7237c" name="Default Changelist" comment="" />
+      <created>1539575882128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539575882128</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="984" y="82" width="911" height="751" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" x="1306" y="100" width="226" height="887" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32964602" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32919955" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
+      <window_info active="true" anchor="bottom" x="57" y="357" width="1863" height="373" id="Terminal" order="7" sideWeight="0.4988938" visible="true" weight="0.2826087" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32807216" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011062" side_tool="true" weight="0.32807216" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32807216" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/app/templates" />
+    <entry file="file://$PROJECT_DIR$/app/templates/award/profile.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/award/detail.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/award/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/award/base.html" />
+    <entry file="file://$USER_HOME$/db.sqlite3" />
+    <entry file="file://$USER_HOME$/app/templates/comment.html" />
+    <entry file="file://$USER_HOME$/app/templates/registration/registration_form.html" />
+    <entry file="file://$USER_HOME$/Procfile" />
+    <entry file="file://$USER_HOME$/.gitignore" />
+    <entry file="file://$USER_HOME$/runtime.txt" />
+    <entry file="file://$USER_HOME$/requirements.txt" />
+    <entry file="file://$USER_HOME$/README.md" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/pygments/formatters/terminal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/app/static/image/mac.png" />
+    <entry file="file://$USER_HOME$/app/apps.py" />
+    <entry file="file://$USER_HOME$/awaards/urls.py" />
+    <entry file="file://$USER_HOME$/app/static/css/navbar.css" />
+    <entry file="file://$USER_HOME$/app/static/css/basenews.css" />
+    <entry file="file://$USER_HOME$/app/templates/reviews/base.html" />
+    <entry file="file://$USER_HOME$/app/templates/reviews/review_detail.html" />
+    <entry file="file://$USER_HOME$/app/templates/reviews/review_list.html" />
+    <entry file="file://$USER_HOME$/awaards/settings.py" />
+    <entry file="file://$USER_HOME$/app/admin.py" />
+    <entry file="file://$USER_HOME$/app/templates/profile/setting.html" />
+    <entry file="file://$USER_HOME$/app/templates/upload/new-upload.html" />
+    <entry file="file://$USER_HOME$/awaards/__init__.py" />
+    <entry file="file://$USER_HOME$/app/templates/registration/login.html" />
+    <entry file="file://$USER_HOME$/app/templates/profile/view-profile.html" />
+    <entry file="file://$USER_HOME$/app/templates/base.html" />
+    <entry file="file://$USER_HOME$/app/templates/profile/profile.html" />
+    <entry file="file://$USER_HOME$/app/templates/index.html" />
+    <entry file="file://$USER_HOME$/app/forms.py" />
+    <entry file="file://$USER_HOME$/app/templates/profile/edit.html" />
+    <entry file="file://$USER_HOME$/.env" />
+    <entry file="file://$USER_HOME$/app/models.py" />
+    <entry file="file://$USER_HOME$/app/urls.py" />
+    <entry file="file://$USER_HOME$/app/templates/navbar.html" />
+    <entry file="file://$USER_HOME$/app/templates/search.html" />
+    <entry file="file://$USER_HOME$/app/views.py" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
