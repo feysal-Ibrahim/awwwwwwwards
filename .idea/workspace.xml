@@ -22,7 +22,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="25" />
-          <entry key="py" value="19" />
+          <entry key="py" value="21" />
           <entry key="sqlite3" value="1" />
           <entry key="templates" value="1" />
           <entry key="txt" value="2" />
@@ -32,7 +32,7 @@
         <counts>
           <entry key="HTML" value="25" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="19" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -110,7 +110,29 @@
     <favorites_list name="." />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2036">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1430">
+              <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -168,11 +190,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="984" />
-    <option name="y" value="82" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="1009" />
+    <option name="y" value="24" />
     <option name="width" value="911" />
-    <option name="height" value="751" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -241,9 +263,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="984" y="82" width="911" height="751" extended-state="0" />
+    <frame x="1009" y="24" width="911" height="1056" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" x="1306" y="100" width="226" height="887" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" x="1306" y="100" width="226" height="887" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32964602" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,7 +275,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
-      <window_info active="true" anchor="bottom" x="57" y="357" width="1863" height="373" id="Terminal" order="7" sideWeight="0.4988938" visible="true" weight="0.2826087" />
+      <window_info active="true" anchor="bottom" x="57" y="357" width="1863" height="373" id="Terminal" order="7" sideWeight="0.4988938" visible="true" weight="0.33222592" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32807216" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011062" side_tool="true" weight="0.32807216" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32807216" />
@@ -338,6 +360,23 @@
     <entry file="file://$USER_HOME$/app/templates/navbar.html" />
     <entry file="file://$USER_HOME$/app/templates/search.html" />
     <entry file="file://$USER_HOME$/app/views.py" />
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2036">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
